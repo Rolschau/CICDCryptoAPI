@@ -16,7 +16,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6.0.42'
+        dotnet-version: '8.0.101'
 
     - name: Build and Test
       run: |
