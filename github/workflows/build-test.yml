@@ -16,10 +16,13 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6.x'
+        dotnet-version: '6.0.42'
 
     - name: Build and Test
       run: |
         dotnet restore
         dotnet build --configuration Release
         dotnet test --configuration Release --no-restore
+    - name: Build docker image
+      run: docker build -t phuongladocker/api-crypto-docker
+
