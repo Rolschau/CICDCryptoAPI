@@ -20,8 +20,10 @@ jobs:
 
     - name: Build and Test
       run: |
+        cd APIProject
         dotnet restore
         dotnet build --configuration Release
         dotnet test --configuration Release --no-restore
-    - name: Build docker image
-      run: docker build -t phuongladocker/api-crypto-docker .
+
+
+    
